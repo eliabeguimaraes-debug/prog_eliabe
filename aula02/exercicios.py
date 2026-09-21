@@ -1,4 +1,4 @@
-"""Aula 02 - Listas em Python.
+ n"""Aula 02 - Listas em Python.
 
 NAO mude o nome deste arquivo nem a assinatura das funcoes.
 Escreva sua solucao no lugar do 'pass'.
