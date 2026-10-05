@@ -10,12 +10,18 @@ Os exercicios do Bloco 3 devolvem DOIS valores: o resultado e a contagem.
 
 def conta_negativos(lista):
     """Quantos numeros da lista sao menores que zero."""
-    pass
-
+    cont = 0
+    for x in lista:
+        if x <= 0:
+            cont += 1
+            return cont 
+            
+        
+    
 
 def media(lista):
     """Media dos numeros. Lista vazia devolve 0."""
-    pass
+     
 
 
 def sem_o_maior(lista):
