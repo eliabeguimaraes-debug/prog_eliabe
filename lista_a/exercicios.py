@@ -21,19 +21,42 @@ def conta_negativos(lista):
 
 def media(lista):
     """Media dos numeros. Lista vazia devolve 0."""
-     
+    if len(lista) == 0
+    return []
+     soma = 0
+for n in lista:
+    soma += n
+media = soma/len(lista)
+return media
 
 
 def sem_o_maior(lista):
     """Lista NOVA sem o maior valor. Se o maior repete, tira so o primeiro."""
-    pass
+    if len(lista) == 0
+return[]
+
+maior = lista [0]
+for n in lista:
+    if n > maior
+maior = n
+nova = []
+Ja_tirou = Flse
+for n in lista:
+    if n == maior an not Ja_tirou:
+Ja_tirou = True
+else:
+nova.append(n)
+return nova
 
 
 def acumulada(lista):
     """Lista NOVA onde cada posicao e a soma de tudo ate ali.
     acumulada([1, 2, 3]) -> [1, 3, 6]"""
-    pass
-
+    nova = []
+soma = 0
+for i in lista:soma += i
+    nova.append(soma)
+return nova
 
 def achata(lista_de_listas):
     """(Desafio) Junta as sublistas numa lista so.
@@ -45,7 +68,11 @@ def achata(lista_de_listas):
 
 def busca_ultima(lista, alvo):
     """ULTIMA posicao do alvo, ou -1."""
-    pass
+    posicao = -1
+for i in range(len(lista)): 
+    if lista[i] == alvo:
+        posicao = i
+        return posicao
 
 
 def conta_ocorrencias(lista, alvo):
