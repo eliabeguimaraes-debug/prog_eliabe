@@ -61,7 +61,7 @@ return nova
 def achata(lista_de_listas):
     """(Desafio) Junta as sublistas numa lista so.
     achata([[1, 2], [3]]) -> [1, 2, 3]"""
-    pass
+
 
 
 # ---------- Bloco 2: busca ----------
