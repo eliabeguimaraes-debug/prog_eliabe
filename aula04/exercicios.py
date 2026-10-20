@@ -26,14 +26,26 @@ def tem_repetido_ordenando(lista):
     de vizinhos comparado. Pare no primeiro repetido.
     A ordenacao em si nao entra na contagem.
     tem_repetido_ordenando([1, 2, 1, 3]) -> (True, 1)"""
-    pass
+    def custo_binaria(n):
+        divisoe = 0
+        while n > 1:
+            n //= 2
+            divisoes += 1
+            return divisoes + 1
 
 
 def mediana(lista):
     """Valor do meio da lista ordenada. Tamanho par: media dos dois do meio.
     Lista vazia: None. Nao altere a lista recebida.
     mediana([4, 1, 3, 2]) -> 2.5"""
-    pass
+    def tem_repetido_ordenando(lista):
+        copia = sorted(lista)
+        comp = 0
+        for i in range(len(copia)-1):
+            comp += 1
+            if copia[i] == copia[i+1]:
+                return (True, comp)
+         return(False, comp)
 
 
 def buscas_para_compensar(n, custo_ordenar):
@@ -41,7 +53,12 @@ def buscas_para_compensar(n, custo_ordenar):
         custo_ordenar + k * custo_binaria(n)  <  k * n
     Devolve -1 se nunca compensa.
     buscas_para_compensar(100, 10000) -> 108"""
-    pass
+  def busca_para_compensar(n, custo_ordenar:
+    cb = custo_binaria(n)
+    if n <= cb:
+         return -1
+        
+    return custo_ordenar // (n - cb) + 1
 
 
 def menor_diferenca(lista):
@@ -50,4 +67,16 @@ def menor_diferenca(lista):
     Existe um teste com 20 mil elementos que da tempo limite se voce
     olhar todos os pares.
     menor_diferenca([10, 3, 8, 14]) -> 2"""
-    pass
+        def menor_diferenca(lista):
+        if len(lista) < 2:
+            return None
+            copia = sorted(lista)
+            menor = abs(copia[1] - copia[0])
+            for i in range(1, len(copia)-1):
+                d = copia[i+1] - copia[i]
+                if d < menor:
+                    menor = d
+                    if menor == 0:
+                        return 0
+            return menor
+
