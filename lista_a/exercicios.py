@@ -21,42 +21,41 @@ def conta_negativos(lista):
 
 def media(lista):
     """Media dos numeros. Lista vazia devolve 0."""
-    if len(lista) == 0
-    return []
-     soma = 0
-for n in lista:
-    soma += n
-media = soma/len(lista)
-return media
+    # [prof] Faltou o ":" no if (if len(lista) == 0:) e, abaixo, o codigo saiu
+    # de dentro da funcao (indentacao zerada), alem de "return []" quando o certo
+    # para media de lista vazia e 0. Isso travou o arquivo todo. Original:
+    #     if len(lista) == 0
+    #     return []
+    #      soma = 0
+    #     for n in lista:
+    #         soma += n
+    #     media = soma/len(lista)
+    #     return media
+    pass
 
 
 def sem_o_maior(lista):
     """Lista NOVA sem o maior valor. Se o maior repete, tira so o primeiro."""
-    if len(lista) == 0
-return[]
-
-maior = lista [0]
-for n in lista:
-    if n > maior
-maior = n
-nova = []
-Ja_tirou = Flse
-for n in lista:
-    if n == maior an not Ja_tirou:
-Ja_tirou = True
-else:
-nova.append(n)
-return nova
+    # [prof] Varios erros que derrubaram o arquivo: faltou ":" nos if/for,
+    # "Flse" em vez de False, "an" em vez de "and", e o corpo fora da funcao.
+    # Revise a indentacao: tudo que e da funcao fica recuado sob o "def".
+    # Original (trechos): "if len(lista) == 0" sem ":", "Ja_tirou = Flse",
+    # "if n == maior an not Ja_tirou:".
+    pass
 
 
 def acumulada(lista):
     """Lista NOVA onde cada posicao e a soma de tudo ate ali.
     acumulada([1, 2, 3]) -> [1, 3, 6]"""
-    nova = []
-soma = 0
-for i in lista:soma += i
-    nova.append(soma)
-return nova
+    # [prof] "for i in lista:soma += i" junta duas coisas na mesma linha e o
+    # append ficou fora do for. O corpo tambem saiu da funcao. O certo: for na
+    # sua linha, corpo recuado. Original:
+    #     nova = []
+    #     soma = 0
+    #     for i in lista:soma += i
+    #         nova.append(soma)
+    #     return nova
+    pass
 
 def achata(lista_de_listas):
     """(Desafio) Junta as sublistas numa lista so.
@@ -68,11 +67,16 @@ def achata(lista_de_listas):
 
 def busca_ultima(lista, alvo):
     """ULTIMA posicao do alvo, ou -1."""
-    posicao = -1
-for i in range(len(lista)): 
-    if lista[i] == alvo:
-        posicao = i
-        return posicao
+    # [prof] O corpo saiu de dentro da funcao (indentacao) e o "return" estava
+    # dentro do if, o que faria parar na PRIMEIRA ocorrencia, nao na ultima.
+    # Para a ultima: percorra tudo, guarde a posicao quando achar e so de return
+    # DEPOIS do for. Original:
+    #     posicao = -1
+    #     for i in range(len(lista)):
+    #         if lista[i] == alvo:
+    #             posicao = i
+    #             return posicao
+    pass
 
 
 def conta_ocorrencias(lista, alvo):
